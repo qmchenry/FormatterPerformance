@@ -13,6 +13,7 @@
 		A91D2701269631E6008D42FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91D2700269631E6008D42FA /* Preview Assets.xcassets */; };
 		A91D270B269631E6008D42FA /* FormatterPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D270A269631E6008D42FA /* FormatterPerformanceTests.swift */; };
 		A91D2715269631E6008D42FA /* FormatterPerformanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D2714269631E6008D42FA /* FormatterPerformanceUITests.swift */; };
+		A91D272226973F7B008D42FA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A91D272126973F7B008D42FA /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		A91D270A269631E6008D42FA /* FormatterPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterPerformanceTests.swift; sourceTree = "<group>"; };
 		A91D2710269631E6008D42FA /* FormatterPerformanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormatterPerformanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91D2714269631E6008D42FA /* FormatterPerformanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterPerformanceUITests.swift; sourceTree = "<group>"; };
+		A91D272126973F7B008D42FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		A91D26ED269631E4008D42FA = {
 			isa = PBXGroup;
 			children = (
+				A91D272126973F7B008D42FA /* README.md */,
 				A91D26F8269631E4008D42FA /* FormatterPerformance */,
 				A91D2709269631E6008D42FA /* FormatterPerformanceTests */,
 				A91D2713269631E6008D42FA /* FormatterPerformanceUITests */,
@@ -228,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A91D272226973F7B008D42FA /* README.md in Resources */,
 				A91D2701269631E6008D42FA /* Preview Assets.xcassets in Resources */,
 				A91D26FE269631E6008D42FA /* Assets.xcassets in Resources */,
 			);
@@ -415,7 +419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FormatterPerformance/Preview Content\"";
-				DEVELOPMENT_TEAM = 4WR66L3TZA;
+				DEVELOPMENT_TEAM = 6TVV5C2TV8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -445,7 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FormatterPerformance/Preview Content\"";
-				DEVELOPMENT_TEAM = 4WR66L3TZA;
+				DEVELOPMENT_TEAM = 6TVV5C2TV8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
