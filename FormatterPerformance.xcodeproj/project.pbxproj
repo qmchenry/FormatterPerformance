@@ -12,19 +12,11 @@
 		A91D26FE269631E6008D42FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91D26FD269631E6008D42FA /* Assets.xcassets */; };
 		A91D2701269631E6008D42FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91D2700269631E6008D42FA /* Preview Assets.xcassets */; };
 		A91D270B269631E6008D42FA /* FormatterPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D270A269631E6008D42FA /* FormatterPerformanceTests.swift */; };
-		A91D2715269631E6008D42FA /* FormatterPerformanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D2714269631E6008D42FA /* FormatterPerformanceUITests.swift */; };
 		A91D272226973F7B008D42FA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A91D272126973F7B008D42FA /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A91D2707269631E6008D42FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A91D26EE269631E4008D42FA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A91D26F5269631E4008D42FA;
-			remoteInfo = FormatterPerformance;
-		};
-		A91D2711269631E6008D42FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A91D26EE269631E4008D42FA /* Project object */;
 			proxyType = 1;
@@ -41,8 +33,6 @@
 		A91D2700269631E6008D42FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A91D2706269631E6008D42FA /* FormatterPerformanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormatterPerformanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91D270A269631E6008D42FA /* FormatterPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterPerformanceTests.swift; sourceTree = "<group>"; };
-		A91D2710269631E6008D42FA /* FormatterPerformanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormatterPerformanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A91D2714269631E6008D42FA /* FormatterPerformanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterPerformanceUITests.swift; sourceTree = "<group>"; };
 		A91D272126973F7B008D42FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,13 +51,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A91D270D269631E6008D42FA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,7 +60,6 @@
 				A91D272126973F7B008D42FA /* README.md */,
 				A91D26F8269631E4008D42FA /* FormatterPerformance */,
 				A91D2709269631E6008D42FA /* FormatterPerformanceTests */,
-				A91D2713269631E6008D42FA /* FormatterPerformanceUITests */,
 				A91D26F7269631E4008D42FA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +69,6 @@
 			children = (
 				A91D26F6269631E4008D42FA /* FormatterPerformance.app */,
 				A91D2706269631E6008D42FA /* FormatterPerformanceTests.xctest */,
-				A91D2710269631E6008D42FA /* FormatterPerformanceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,14 +98,6 @@
 				A91D270A269631E6008D42FA /* FormatterPerformanceTests.swift */,
 			);
 			path = FormatterPerformanceTests;
-			sourceTree = "<group>";
-		};
-		A91D2713269631E6008D42FA /* FormatterPerformanceUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A91D2714269631E6008D42FA /* FormatterPerformanceUITests.swift */,
-			);
-			path = FormatterPerformanceUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +138,6 @@
 			productReference = A91D2706269631E6008D42FA /* FormatterPerformanceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A91D270F269631E6008D42FA /* FormatterPerformanceUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A91D271E269631E6008D42FA /* Build configuration list for PBXNativeTarget "FormatterPerformanceUITests" */;
-			buildPhases = (
-				A91D270C269631E6008D42FA /* Sources */,
-				A91D270D269631E6008D42FA /* Frameworks */,
-				A91D270E269631E6008D42FA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A91D2712269631E6008D42FA /* PBXTargetDependency */,
-			);
-			name = FormatterPerformanceUITests;
-			productName = FormatterPerformanceUITests;
-			productReference = A91D2710269631E6008D42FA /* FormatterPerformanceUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +152,6 @@
 						CreatedOnToolsVersion = 13.0;
 					};
 					A91D2705269631E6008D42FA = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = A91D26F5269631E4008D42FA;
-					};
-					A91D270F269631E6008D42FA = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = A91D26F5269631E4008D42FA;
 					};
@@ -221,7 +172,6 @@
 			targets = (
 				A91D26F5269631E4008D42FA /* FormatterPerformance */,
 				A91D2705269631E6008D42FA /* FormatterPerformanceTests */,
-				A91D270F269631E6008D42FA /* FormatterPerformanceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,13 +188,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A91D2704269631E6008D42FA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A91D270E269631E6008D42FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -271,14 +214,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A91D270C269631E6008D42FA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A91D2715269631E6008D42FA /* FormatterPerformanceUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +221,6 @@
 			isa = PBXTargetDependency;
 			target = A91D26F5269631E4008D42FA /* FormatterPerformance */;
 			targetProxy = A91D2707269631E6008D42FA /* PBXContainerItemProxy */;
-		};
-		A91D2712269631E6008D42FA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A91D26F5269631E4008D42FA /* FormatterPerformance */;
-			targetProxy = A91D2711269631E6008D42FA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -521,52 +451,6 @@
 			};
 			name = Release;
 		};
-		A91D271F269631E6008D42FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4WR66L3TZA;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.FormatterPerformanceUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FormatterPerformance;
-			};
-			name = Debug;
-		};
-		A91D2720269631E6008D42FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4WR66L3TZA;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.FormatterPerformanceUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FormatterPerformance;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -593,15 +477,6 @@
 			buildConfigurations = (
 				A91D271C269631E6008D42FA /* Debug */,
 				A91D271D269631E6008D42FA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A91D271E269631E6008D42FA /* Build configuration list for PBXNativeTarget "FormatterPerformanceUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A91D271F269631E6008D42FA /* Debug */,
-				A91D2720269631E6008D42FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
