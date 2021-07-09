@@ -13,6 +13,7 @@
 		A91D2701269631E6008D42FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91D2700269631E6008D42FA /* Preview Assets.xcassets */; };
 		A91D270B269631E6008D42FA /* FormatterPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D270A269631E6008D42FA /* FormatterPerformanceTests.swift */; };
 		A91D272226973F7B008D42FA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A91D272126973F7B008D42FA /* README.md */; };
+		A9AC0CBA2697F92B004C8AE9 /* FormatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC0CB92697F92B004C8AE9 /* FormatterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		A91D2706269631E6008D42FA /* FormatterPerformanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormatterPerformanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91D270A269631E6008D42FA /* FormatterPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterPerformanceTests.swift; sourceTree = "<group>"; };
 		A91D272126973F7B008D42FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A9AC0CB92697F92B004C8AE9 /* FormatterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			children = (
 				A91D26F9269631E4008D42FA /* FormatterPerformanceApp.swift */,
 				A91D26FB269631E4008D42FA /* ContentView.swift */,
+				A9AC0CB92697F92B004C8AE9 /* FormatterView.swift */,
 				A91D26FD269631E6008D42FA /* Assets.xcassets */,
 				A91D26FF269631E6008D42FA /* Preview Content */,
 			);
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9AC0CBA2697F92B004C8AE9 /* FormatterView.swift in Sources */,
 				A91D26FC269631E4008D42FA /* ContentView.swift in Sources */,
 				A91D26FA269631E4008D42FA /* FormatterPerformanceApp.swift in Sources */,
 			);
