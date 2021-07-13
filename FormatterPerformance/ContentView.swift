@@ -85,19 +85,22 @@ struct ContentView: View {
         time(name: "Baseline                            ", count: 100000) { }
         time(name: "Baseline                            ", count: 100000) { }
         time(name: "Baseline                            ", count: 100000) { }
+        timeMaking(name: "Making Date                         ", count: 100000) { Date() }
+        timeMaking(name: "Making Date                         ", count: 100000) { Date() }
+        timeMaking(name: "Making Date                         ", count: 100000) { Date() }
 
-        time(name: "Making DF with string format        ", count: 100000) { makeFormatterWithString() }
-        time(name: "Making DF with string format        ", count: 100000) { makeFormatterWithString() }
-        time(name: "Making DF with string format        ", count: 100000) { makeFormatterWithString() }
-        time(name: "Making DF with date/time styles     ", count: 100000) { makeFormatterWithDateTimeStyles() }
-        time(name: "Making DF with date/time styles     ", count: 100000) { makeFormatterWithDateTimeStyles() }
-        time(name: "Making DF with date/time styles     ", count: 100000) { makeFormatterWithDateTimeStyles() }
-        time(name: "Making ISO8601DateFormatters - plain", count: 1000) { makeISO8601Formatter() }
-        time(name: "Making ISO8601DateFormatters - plain", count: 1000) { makeISO8601Formatter() }
-        time(name: "Making ISO8601DateFormatters - plain", count: 1000) { makeISO8601Formatter() }
-        time(name: "Making ISO8601DateFormatters - extra", count: 1000) { makeISO8601FormatterExtra() }
-        time(name: "Making ISO8601DateFormatters - extra", count: 1000) { makeISO8601FormatterExtra() }
-        time(name: "Making ISO8601DateFormatters - extra", count: 1000) { makeISO8601FormatterExtra() }
+        timeMaking(name: "Making DF with string format        ", count: 100000) { makeFormatterWithString() }
+        timeMaking(name: "Making DF with string format        ", count: 100000) { makeFormatterWithString() }
+        timeMaking(name: "Making DF with string format        ", count: 100000) { makeFormatterWithString() }
+        timeMaking(name: "Making DF with date/time styles     ", count: 100000) { makeFormatterWithDateTimeStyles() }
+        timeMaking(name: "Making DF with date/time styles     ", count: 100000) { makeFormatterWithDateTimeStyles() }
+        timeMaking(name: "Making DF with date/time styles     ", count: 100000) { makeFormatterWithDateTimeStyles() }
+        timeMaking(name: "Making ISO8601DateFormatters - plain", count: 1000) { makeISO8601Formatter() }
+        timeMaking(name: "Making ISO8601DateFormatters - plain", count: 1000) { makeISO8601Formatter() }
+        timeMaking(name: "Making ISO8601DateFormatters - plain", count: 1000) { makeISO8601Formatter() }
+        timeMaking(name: "Making ISO8601DateFormatters - extra", count: 1000) { makeISO8601FormatterExtra() }
+        timeMaking(name: "Making ISO8601DateFormatters - extra", count: 1000) { makeISO8601FormatterExtra() }
+        timeMaking(name: "Making ISO8601DateFormatters - extra", count: 1000) { makeISO8601FormatterExtra() }
 
         time(name: "Make&use DateFormatter - string frmt", count: 1000) { use(formatter: makeFormatterWithString(), date: date) }
         time(name: "Make&use DateFormatter - string frmt", count: 1000) { use(formatter: makeFormatterWithString(), date: date) }
@@ -111,9 +114,19 @@ struct ContentView: View {
         time(name: "Make&use ISO8601DateFormatter extra ", count: 1000) { use(formatter: makeISO8601FormatterExtra(), date: date) }
         time(name: "Make&use ISO8601DateFormatter extra ", count: 1000) { use(formatter: makeISO8601FormatterExtra(), date: date) }
         time(name: "Make&use ISO8601DateFormatter extra ", count: 1000) { use(formatter: makeISO8601FormatterExtra(), date: date) }
+
+        print("- Cached DateFormatter")
+        let isoFormatterExtra = makeISO8601FormatterExtra()
+        time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: isoFormatterExtra, date: date) }
+        time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: isoFormatterExtra, date: date) }
+        time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: isoFormatterExtra, date: date) }
+        let formatterWithString = makeFormatterWithString()
+        time(name: "Use DateFormatter - withString      ", count: 100000) { use(formatter: formatterWithString, date: date) }
+        time(name: "Use DateFormatter - withString      ", count: 100000) { use(formatter: formatterWithString, date: date) }
+        time(name: "Use DateFormatter - withString      ", count: 100000) { use(formatter: formatterWithString, date: date) }
 
         if #available(iOS 15.0, *) {
-            print("iOS 15 formatters")
+            print("- iOS 15 formatters")
             time(name: "Formatting date                     ", count: 100000) { format(date: date) }
             time(name: "Formatting date                     ", count: 100000) { format(date: date) }
             time(name: "Formatting date                     ", count: 100000) { format(date: date) }
@@ -128,15 +141,11 @@ struct ContentView: View {
             time(name: ".iso8601 with fractional seconds    ", count: 100000) { formatISO(date: date) }
         }
 
-        print("Cached DateFormatter")
-        let isoFormatterExtra = makeISO8601FormatterExtra()
-        time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: isoFormatterExtra, date: date) }
-        time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: isoFormatterExtra, date: date) }
-        time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: isoFormatterExtra, date: date) }
-        let formatterWithString = makeFormatterWithString()
-        time(name: "Use DateFormatter - withString      ", count: 100000) { use(formatter: formatterWithString, date: date) }
-        time(name: "Use DateFormatter - withString      ", count: 100000) { use(formatter: formatterWithString, date: date) }
-        time(name: "Use DateFormatter - withString      ", count: 100000) { use(formatter: formatterWithString, date: date) }
+        print("- Manual tons of code")
+        lotsOfManualWork()
+        lotsOfManualWork2()
+        lotsOfManualWork3()
+        lotsOfManualWork4()
     }
 
     func time(name: String, count: Int, action: () -> Void) {
@@ -150,6 +159,19 @@ struct ContentView: View {
         let µsEach = String(format: "%7.3fµs", duration / Double(count) * 1000000)
         print("\(name) \(String(format: "%9d", count))x: \(µsEach) each  \(msDuration) total")
     }
+
+    func timeMaking(name: String, count: Int, action: () -> Any) {
+        let start = Date()
+        let results = (0..<count).map { _ in
+            action()
+        }
+        let end = Date()
+        let duration = end.timeIntervalSince(start)
+        let msDuration = String(format: "%7.3fms", duration * 1000.0)
+        let µsEach = String(format: "%7.3fµs", duration / Double(count) * 1000000)
+        print("\(name) \(String(format: "%9d", results.count))x: \(µsEach) each  \(msDuration) total")
+    }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
