@@ -226,8 +226,8 @@ func manualMake() {
 }
 
 func manualUseCached() {
-    let date = Date()
     let f = DateFormatter(); f.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    let date = Date()
 
     _ = f.string(from: date); _ = f.string(from: date); _ = f.string(from: date); _ = f.string(from: date); _ = f.string(from: date) // 5
     _ = f.string(from: date); _ = f.string(from: date); _ = f.string(from: date); _ = f.string(from: date); _ = f.string(from: date) // 10

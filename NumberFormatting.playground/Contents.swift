@@ -3,12 +3,12 @@ import Foundation
 0.453.formatted(.percent)
 
 Double.pi.formatted(.number)
-Double.pi.formatted(.number.grouping(.automatic))
+Double.pi.formatted(.number.scale(1000000).grouping(.automatic))
 Double.pi.formatted(.number.precision(.significantDigits(2)))
 Double.pi.formatted(.number.precision(.integerLength(2...4)))
 Double.pi.formatted(.number.precision(.fractionLength(4)))
 Double.pi.formatted(.number.precision(.fractionLength(4...6)))
-0.123400123.formatted(.number.precision(.fractionLength(4...6)))
+0.123030123.formatted(.number.precision(.fractionLength(4...6)))
 Double.pi.formatted(.number.precision(.integerAndFractionLength(integer: 3, fraction: 2)))
 
 (1000 * Double.pi).formatted(.number.notation(.scientific))
@@ -59,4 +59,16 @@ Measurement(value: 10, unit: UnitVolume.liters).converted(to: .imperialTeaspoons
  }
 
  */
+
+// Bonus! Collections..
+let list = ["Lions", "Tigers", "Bears","Lions", "Tigers", "Bears","Lions", "Tigers", "Bears","Lions", "Tigers", "Bears","Lions", "Tigers", "Bears","Lions", "Tigers", "Bears","Lions", "Tigers", "Bears","Lions", "Tigers", "Bears", ]
+list.formatted()
+list.formatted(.list(type: .and))
+list.formatted(.list(type: .or))
+list.formatted(.list(type: .or, width: .short))
+list.formatted(.list(type: .or, width: .narrow))
+list.formatted(.list(type: .or, width: .standard))
+
+[Date(), Date(timeIntervalSinceNow: 525600*60)]
+    .formatted(.list(memberStyle: .dateTime.year().month(), type: .or, width: .short))
 
