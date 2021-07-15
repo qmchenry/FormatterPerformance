@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("Hello formatted()!")
             .onAppear {
                 lotsOfFormatting()
             }
@@ -121,6 +120,8 @@ struct ContentView: View {
         time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: isoFormatterExtra, date: date) }
         time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: isoFormatterExtra, date: date) }
         let formatterWithString = makeFormatterWithString()
+        time(name: "Use DateFormatter - withString      ", count: 1) { use(formatter: formatterWithString, date: date) }
+        time(name: "Use DateFormatter - withString      ", count: 1) { use(formatter: formatterWithString, date: date) }
         time(name: "Use DateFormatter - withString      ", count: 1) { use(formatter: formatterWithString, date: date) }
         time(name: "Use DateFormatter - withString      ", count: 1) { use(formatter: formatterWithString, date: date) }
         time(name: "Use DateFormatter - withString      ", count: 1) { use(formatter: formatterWithString, date: date) }
