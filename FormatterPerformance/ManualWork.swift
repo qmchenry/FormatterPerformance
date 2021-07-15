@@ -7,7 +7,7 @@
 
 import Foundation
 
-func lotsOfManualWork() {
+func manualMakeAndUse() {
     let date = Date()
     let f000 = DateFormatter(); f000.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"; _ = f000.string(from: date)
     let f001 = DateFormatter(); f001.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"; _ = f001.string(from: date)
@@ -116,7 +116,7 @@ func lotsOfManualWork() {
     print("Make&Use DateFormatter - string format \(String(format: "%7d", count))x: \(µsEach) each  \(msDuration) total")
 }
 
-func lotsOfManualWork2() {
+func manualMake() {
     let date = Date()
     let f000 = DateFormatter(); f000.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     let f001 = DateFormatter(); f001.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -225,7 +225,7 @@ func lotsOfManualWork2() {
     print("Make DateFormatter - string format   \(String(format: "%9d", count))x: \(µsEach) each  \(msDuration) total")
 }
 
-func lotsOfManualWork3() {
+func manualUseCached() {
     let date = Date()
     let f = DateFormatter(); f.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
 

@@ -13,69 +13,80 @@ In the iOS 15 formatted section are the use performance metrics of a few formatt
 See `ContentView.swift` for the code that generates this output.
 
 ```
-makeFormatterWithString() -> 2021-07-13T17:55:38-0400
-makeFormatterWithDateTimeStyles() -> 7/13/21, 5:55 PM
-makeISO8601Formatter() -> 2021-07-13T21:55:38Z
-makeISO8601FormatterExtra() -> 2021-07-13T21:55:38.306Z
-format() -> 7/13/2021, 5:55 PM
-format2() -> Jul 13, 2021, 5:55:38 PM
-format3() -> 7/13/21, 5:55 PM
-formatISO() -> 2021-07-13T21:55:38.306Z
+makeFormatterWithString() -> 2021-07-15T10:09:33-0400
+makeFormatterWithDateTimeStyles() -> 7/15/21, 10:09 AM
+makeISO8601Formatter() -> 2021-07-15T14:09:33Z
+makeISO8601FormatterExtra() -> 2021-07-15T14:09:33.601Z
+format() -> 7/15/2021, 10:09 AM
+format2() -> Jul 15, 2021, 10:09:33 AM
+format3() -> 7/15/21, 10:09 AM
+formatISO() -> 2021-07-15T14:09:33.601Z
 
-Baseline                                100000x:   0.000µs each    0.000ms total
 Baseline                                100000x:   0.000µs each    0.000ms total
 Baseline                                100000x:   0.000µs each    0.001ms total
-Making Date                             100000x:   0.071µs each    7.097ms total
-Making Date                             100000x:   0.080µs each    7.957ms total
-Making Date                             100000x:   0.061µs each    6.086ms total
-Making DF with string format            100000x:   0.428µs each   42.841ms total
-Making DF with string format            100000x:   0.276µs each   27.616ms total
-Making DF with string format            100000x:   0.283µs each   28.286ms total
-Making DF with date/time styles         100000x:   0.302µs each   30.241ms total
-Making DF with date/time styles         100000x:   0.312µs each   31.248ms total
-Making DF with date/time styles         100000x:   0.300µs each   30.028ms total
-Making ISO8601DateFormatters - plain      1000x:  58.333µs each   58.333ms total
-Making ISO8601DateFormatters - plain      1000x:  58.566µs each   58.566ms total
-Making ISO8601DateFormatters - plain      1000x:  58.955µs each   58.955ms total
-Making ISO8601DateFormatters - extra      1000x: 116.212µs each  116.212ms total
-Making ISO8601DateFormatters - extra      1000x: 118.301µs each  118.301ms total
-Making ISO8601DateFormatters - extra      1000x: 115.477µs each  115.477ms total
-Make&use DateFormatter - string frmt      1000x:  84.282µs each   84.282ms total
-Make&use DateFormatter - string frmt      1000x:  84.143µs each   84.143ms total
-Make&use DateFormatter - string frmt      1000x:  83.961µs each   83.961ms total
-Make&use DateFormatter - styles           1000x:  88.351µs each   88.351ms total
-Make&use DateFormatter - styles           1000x:  88.689µs each   88.689ms total
-Make&use DateFormatter - styles           1000x:  88.441µs each   88.441ms total
-Make&use ISO8601DateFormatter             1000x: 130.707µs each  130.707ms total
-Make&use ISO8601DateFormatter             1000x: 130.665µs each  130.665ms total
-Make&use ISO8601DateFormatter             1000x: 130.605µs each  130.605ms total
-Make&use ISO8601DateFormatter extra       1000x: 203.290µs each  203.290ms total
-Make&use ISO8601DateFormatter extra       1000x: 203.560µs each  203.560ms total
-Make&use ISO8601DateFormatter extra       1000x: 204.076µs each  204.076ms total
+Baseline                                100000x:   0.000µs each    0.000ms total
+Making Date                             100000x:   0.073µs each    7.347ms total
+Making Date                             100000x:   0.070µs each    6.965ms total
+Making Date                             100000x:   0.058µs each    5.808ms total
+Making DF with string format            100000x:   0.428µs each   42.836ms total
+Making DF with string format            100000x:   0.263µs each   26.343ms total
+Making DF with string format            100000x:   0.272µs each   27.244ms total
+Making DF with date/time styles         100000x:   0.297µs each   29.699ms total
+Making DF with date/time styles         100000x:   0.307µs each   30.717ms total
+Making DF with date/time styles         100000x:   0.296µs each   29.555ms total
+Making ISO8601DateFormatters - plain      1000x:  58.456µs each   58.456ms total
+Making ISO8601DateFormatters - plain      1000x:  58.842µs each   58.842ms total
+Making ISO8601DateFormatters - plain      1000x:  59.387µs each   59.387ms total
+Making ISO8601DateFormatters - extra      1000x: 118.668µs each  118.668ms total
+Making ISO8601DateFormatters - extra      1000x: 117.929µs each  117.929ms total
+Making ISO8601DateFormatters - extra      1000x: 118.837µs each  118.837ms total
+Make&use DateFormatter - string frmt      1000x:  84.148µs each   84.148ms total
+Make&use DateFormatter - string frmt      1000x:  83.976µs each   83.976ms total
+Make&use DateFormatter - string frmt      1000x:  83.969µs each   83.969ms total
+Make&use DateFormatter - styles           1000x:  88.153µs each   88.153ms total
+Make&use DateFormatter - styles           1000x:  88.163µs each   88.163ms total
+Make&use DateFormatter - styles           1000x:  88.063µs each   88.063ms total
+Make&use ISO8601DateFormatter             1000x: 130.629µs each  130.629ms total
+Make&use ISO8601DateFormatter             1000x: 130.641µs each  130.641ms total
+Make&use ISO8601DateFormatter             1000x: 130.728µs each  130.728ms total
+Make&use ISO8601DateFormatter extra       1000x: 204.051µs each  204.051ms total
+Make&use ISO8601DateFormatter extra       1000x: 204.015µs each  204.015ms total
+Make&use ISO8601DateFormatter extra       1000x: 204.057µs each  204.057ms total
 - Cached DateFormatter
-Use ISO8601DateFormatter extra          100000x:   1.987µs each  198.657ms total
-Use ISO8601DateFormatter extra          100000x:   1.991µs each  199.072ms total
-Use ISO8601DateFormatter extra          100000x:   1.987µs each  198.741ms total
-Use DateFormatter - withString          100000x:   1.993µs each  199.298ms total
-Use DateFormatter - withString          100000x:   1.998µs each  199.770ms total
-Use DateFormatter - withString          100000x:   2.005µs each  200.518ms total
+Use ISO8601DateFormatter extra          100000x:   1.966µs each  196.608ms total
+Use ISO8601DateFormatter extra          100000x:   1.969µs each  196.946ms total
+Use ISO8601DateFormatter extra          100000x:   1.967µs each  196.747ms total
+Use DateFormatter - withString               1x: 169.039µs each    0.169ms total
+Use DateFormatter - withString               1x:  18.954µs each    0.019ms total
+Use DateFormatter - withString               1x:  18.001µs each    0.018ms total
+Use DateFormatter - withString              10x:   2.098µs each    0.021ms total
+Use DateFormatter - withString              10x:   2.110µs each    0.021ms total
+Use DateFormatter - withString              10x:   2.098µs each    0.021ms total
+Use DateFormatter - withString          100000x:   1.975µs each  197.480ms total
+Use DateFormatter - withString          100000x:   1.969µs each  196.881ms total
+Use DateFormatter - withString          100000x:   1.970µs each  196.951ms total
+Use ISO8601DateFormatter                100000x:   1.740µs each  173.980ms total
+Use ISO8601DateFormatter                100000x:   1.741µs each  174.093ms total
+Use ISO8601DateFormatter                100000x:   1.743µs each  174.260ms total
+Use ISO8601DateFormatter extra          100000x:   1.967µs each  196.652ms total
+Use ISO8601DateFormatter extra          100000x:   1.966µs each  196.583ms total
+Use ISO8601DateFormatter extra          100000x:   1.962µs each  196.243ms total
 - iOS 15 formatters
-Formatting date                         100000x:   3.436µs each  343.616ms total
-Formatting date                         100000x:   3.427µs each  342.688ms total
-Formatting date                         100000x:   3.442µs each  344.156ms total
-date: .abbrev, time: .standard          100000x:   3.528µs each  352.808ms total
-date: .abbrev, time: .standard          100000x:   3.545µs each  354.473ms total
-date: .abbrev, time: .standard          100000x:   3.538µs each  353.783ms total
-formatted = DF with date/time styles    100000x:   3.804µs each  380.369ms total
-formatted = DF with date/time styles    100000x:   3.804µs each  380.406ms total
-formatted = DF with date/time styles    100000x:   3.804µs each  380.389ms total
-.iso8601 with fractional seconds        100000x:   3.470µs each  347.049ms total
-.iso8601 with fractional seconds        100000x:   3.557µs each  355.700ms total
-.iso8601 with fractional seconds        100000x:   3.495µs each  349.503ms total
+Formatting date                         100000x:   3.415µs each  341.540ms total
+Formatting date                         100000x:   3.417µs each  341.686ms total
+Formatting date                         100000x:   3.413µs each  341.349ms total
+date: .abbrev, time: .standard          100000x:   3.547µs each  354.685ms total
+date: .abbrev, time: .standard          100000x:   3.574µs each  357.391ms total
+date: .abbrev, time: .standard          100000x:   3.585µs each  358.512ms total
+formatted = DF with date/time styles    100000x:   3.764µs each  376.410ms total
+formatted = DF with date/time styles    100000x:   3.780µs each  378.013ms total
+formatted = DF with date/time styles    100000x:   3.755µs each  375.479ms total
+.iso8601 with fractional seconds        100000x:   3.467µs each  346.732ms total
+.iso8601 with fractional seconds        100000x:   3.467µs each  346.719ms total
+.iso8601 with fractional seconds        100000x:   3.478µs each  347.814ms total
 - Manual tons of code
-Make&Use DateFormatter - string format     100x:  90.370µs each    9.037ms total
+Make&Use DateFormatter - string format     100x:  89.990µs each    8.999ms total
 Make DateFormatter - string format         100x:   0.310µs each    0.031ms total
-Cached DateFormatter - string format       100x:   3.270µs each    0.327ms total
+Cached DateFormatter - string format       100x:   3.281µs each    0.328ms total
 Cached DF not Date() - string format       100x:   3.140µs each    0.314ms total
 ```
-

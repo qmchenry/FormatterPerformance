@@ -121,6 +121,12 @@ struct ContentView: View {
         time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: isoFormatterExtra, date: date) }
         time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: isoFormatterExtra, date: date) }
         let formatterWithString = makeFormatterWithString()
+        time(name: "Use DateFormatter - withString      ", count: 1) { use(formatter: formatterWithString, date: date) }
+        time(name: "Use DateFormatter - withString      ", count: 1) { use(formatter: formatterWithString, date: date) }
+        time(name: "Use DateFormatter - withString      ", count: 1) { use(formatter: formatterWithString, date: date) }
+        time(name: "Use DateFormatter - withString      ", count: 10) { use(formatter: formatterWithString, date: date) }
+        time(name: "Use DateFormatter - withString      ", count: 10) { use(formatter: formatterWithString, date: date) }
+        time(name: "Use DateFormatter - withString      ", count: 10) { use(formatter: formatterWithString, date: date) }
         time(name: "Use DateFormatter - withString      ", count: 100000) { use(formatter: formatterWithString, date: date) }
         time(name: "Use DateFormatter - withString      ", count: 100000) { use(formatter: formatterWithString, date: date) }
         time(name: "Use DateFormatter - withString      ", count: 100000) { use(formatter: formatterWithString, date: date) }
@@ -150,9 +156,9 @@ struct ContentView: View {
         }
 
         print("- Manual tons of code")
-        lotsOfManualWork()
-        lotsOfManualWork2()
-        lotsOfManualWork3()
+        manualMakeAndUse()
+        manualMake()
+        manualUseCached()
         lotsOfManualWork4()
     }
 
