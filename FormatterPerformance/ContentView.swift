@@ -124,6 +124,14 @@ struct ContentView: View {
         time(name: "Use DateFormatter - withString      ", count: 100000) { use(formatter: formatterWithString, date: date) }
         time(name: "Use DateFormatter - withString      ", count: 100000) { use(formatter: formatterWithString, date: date) }
         time(name: "Use DateFormatter - withString      ", count: 100000) { use(formatter: formatterWithString, date: date) }
+        let formatterISO8601 = makeISO8601Formatter()
+        time(name: "Use ISO8601DateFormatter            ", count: 100000) { use(formatter: formatterISO8601, date: date) }
+        time(name: "Use ISO8601DateFormatter            ", count: 100000) { use(formatter: formatterISO8601, date: date) }
+        time(name: "Use ISO8601DateFormatter            ", count: 100000) { use(formatter: formatterISO8601, date: date) }
+        let formatterISO8601Extra = makeISO8601FormatterExtra()
+        time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: formatterISO8601Extra, date: date) }
+        time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: formatterISO8601Extra, date: date) }
+        time(name: "Use ISO8601DateFormatter extra      ", count: 100000) { use(formatter: formatterISO8601Extra, date: date) }
 
         if #available(iOS 15.0, *) {
             print("- iOS 15 formatters")

@@ -288,3 +288,45 @@ func lotsOfManualWork4() {
     let µsEach = String(format: "%7.3fµs", duration / Double(count) * 1000000)
     print("Cached DF not Date() - string format \(String(format: "%9d", count))x: \(µsEach) each  \(msDuration) total")
 }
+
+func presentationExample1() -> String {
+
+    let formatter = DateFormatter()
+    formatter.dateFormat = "EEEE, MMM D, yyyy"
+    let string = formatter.string(from: Date())
+
+
+    return string
+
+}
+
+func presentationExample2() -> String {
+
+    let formatter = DateFormatter()
+    formatter.dateStyle = .short
+    formatter.timeStyle = .short
+    let string = formatter.string(from: Date())
+
+
+    return string
+}
+
+func presentationExample2a() -> String {
+
+    let formatter = DateFormatter()
+    formatter.dateStyle = .short
+    formatter.timeStyle = .short
+    return formatter.string(from: Date())
+
+}
+
+func presentationExample3() -> String {
+
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+
+
+
+    return formatter.string(from: Date())
+
+}

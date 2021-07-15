@@ -1,6 +1,6 @@
 import Foundation
 
-0.45.formatted(.percent)
+0.453.formatted(.percent)
 
 Double.pi.formatted(.number)
 Double.pi.formatted(.number.grouping(.automatic))
@@ -8,6 +8,7 @@ Double.pi.formatted(.number.precision(.significantDigits(2)))
 Double.pi.formatted(.number.precision(.integerLength(2...4)))
 Double.pi.formatted(.number.precision(.fractionLength(4)))
 Double.pi.formatted(.number.precision(.fractionLength(4...6)))
+0.123400123.formatted(.number.precision(.fractionLength(4...6)))
 Double.pi.formatted(.number.precision(.integerAndFractionLength(integer: 3, fraction: 2)))
 
 (1000 * Double.pi).formatted(.number.notation(.scientific))
